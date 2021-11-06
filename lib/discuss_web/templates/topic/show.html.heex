@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <td>ID</td>
+    <td><%= @topic.id %></td>
+  </tr>
+  <tr>
+    <td>Title</td>
+    <td><%= @topic.title %></td>
+  </tr>  
+</table>
+
+<%= link to: Routes.topic_path(@conn, :index) do %>
+  Back
+<% end %>
+

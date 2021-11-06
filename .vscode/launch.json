@@ -1,0 +1,26 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "mix_task",
+      "name": "start phoenix",
+      "request": "launch",
+      "projectDir": "${workspaceRoot}",
+      "task": "phx.server"
+      // "type": "mix_task",
+      // "request": "launch",
+      // "name": "iex -S mix phx.server",
+      // "task": "phx.server",
+      // "taskArgs": [],
+      // "projectDir": "${workspaceRoot}",
+      // "env": {
+      //   "CLIENT_ID": "12345",
+      //   "CLIENT_SECRET": "54321"
+      // },
+      // "preLaunchTask": "echo"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<h2>Topics</h2>
+
+<table>
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Title</td>
+      <td>Actions</td>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for topic <- @topics do%>
+      <tr>
+        <td>
+          <a href={Routes.topic_path(@conn, :show, topic.id)}>
+            <%# <li class="collection-item"> %>
+              <%= topic.id%>
+            <%# </li> %>
+          </a>
+        </td>
+        <td>
+          <%= topic.title %>
+        </td>
+        <td>
+          <%= link to: Routes.topic_path(@conn, :edit, topic.id), class: "btn" do %>
+            EDIT
+          <% end %>
+
+          <%= link to: Routes.topic_path(@conn, :delete, topic.id), method: "delete", class: "btn" do %>
+            DELETE
+          <% end %>          
+        </td>
+      </tr>
+    <% end %>  
+  </tbody>
+</table>
+<ul class="collection">
+  
+  <hr>
+  <div class="fixed-action-btn">
+    <%# <a class="btn-floating btn-large waves-effect waves-light red"href={Routes.topic_path(@conn, :new)}> %>
+    <%= link to: Routes.topic_path(@conn, :new), class: "btn-floating btn-large waves-effect waves-light red" do %>
+      <i class="material-icons">add</i>
+    <% end %>
+  </div>
+  
+</ul>
